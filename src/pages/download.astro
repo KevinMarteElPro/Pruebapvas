@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import '../../public/styles/main.scss'
+---
+
+<Layout title="Login">
+	<main id="download_page">
+
+		<div class="main_container_warning" id="warning">
+			<h1 class="container_title">¡Uno de los datos ingresados es incorrecto!</h1>
+		</div>
+
+		<div id="download_container" class="container">
+			<h1 class="container_title_center">¡Descarga el archivo!</h1>
+
+			<a class="container_button" id="login_button" href="./excelResult.xlsx" download>DESCARGAR</a>
+		</div>
+	</main>
+</Layout>
+
+<script>
+	const DownloadContainer: HTMLDivElement = document.getElementById('download_container') as HTMLDivElement
+
+
+	window.addEventListener('DOMContentLoaded', () => {
+		DownloadContainer.classList.add('download_active')
+	})
+
+</script>
+
+

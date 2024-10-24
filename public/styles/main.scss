@@ -1,0 +1,66 @@
+@use 'variables.scss' as variables;
+@use 'login/login.scss';
+@use 'download/download.scss';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    transition: 0.5s all ease;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+}
+
+
+.container_button {
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.1s all linear;
+    border: 0.2vmin solid black ;
+    border-bottom-width: 0.6vmin;
+    border-right-width: 0.4vmin;
+    outline: 0.3vmin solid black;
+    background-color: white;
+    font-weight: 900;
+    font-family: variables.$titleFont;
+    width: 100%;
+    font-size: 3vmin;
+}
+
+.container_button:link {
+    color: black;
+}
+
+.container_button:visited {
+    color: black !important;
+}
+
+.container_button:hover {
+    background-color: whitesmoke;
+    transition: 0.1s all linear;
+    border-bottom-width: 0.8vmin;
+    border-right-width: 0.8vmin;
+}
+
+.container_button:active {
+    background-color: rgb(221, 221, 221);
+    transition: 0.1s all linear;
+    border-bottom-width: 0.8vmin;
+    border-right-width: 0.8vmin;
+}
+
+.container_title_center {
+    text-align: center;
+    border-bottom: 0.5vmin solid black;
+    font-size: 4vmin;
+    font-family: variables.$titleFont;
+    font-weight: variables.$titleWeight;
+    margin-bottom: 0;
+}
+
+

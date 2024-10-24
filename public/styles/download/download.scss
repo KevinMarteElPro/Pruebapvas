@@ -1,0 +1,44 @@
+@use '../variables.scss' as variables;
+
+#download_page {
+
+    display: grid;
+    min-height: 100vh;
+    background-color: rgb(226, 226, 226);
+    background-size: 160px 160px;
+    background-image: radial-gradient(
+        rgb(0, 0, 0) 2px,
+        transparent 3px,
+
+    );
+    grid-template-rows: 37.5% 25% 37.5%;
+    grid-template-columns: auto 45vmin auto;
+    grid-template-areas: 
+    ". . ."
+    '. container .'
+    '. . .';
+}
+
+#download_container {
+    transition: 1s all ease;
+    position: relative;
+    top: -400%;
+    display: flex;
+    background-color: whitesmoke;
+    gap: 2vmin;
+    justify-content: center;
+    flex-flow: column;
+    padding: 4vmin;
+    font-family: variables.$titleFont;
+    grid-area: container;
+    border: 0.4vmin solid black;
+    border-bottom-width: 1vmin;
+    border-right-width: 0.8vmin;
+    color: variables.$textColor;
+    white-space: 0;
+}
+
+.download_active {
+    transition: 1s all ease;
+    top: 0% !important;
+}

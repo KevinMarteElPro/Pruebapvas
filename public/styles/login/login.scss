@@ -1,0 +1,109 @@
+@use '../variables.scss' as variables;
+
+#login_page {
+
+    display: grid;
+    min-height: 100vh;
+    background-color: rgb(226, 226, 226);
+    background-size: 160px 160px;
+    background-image: radial-gradient(
+        rgb(0, 0, 0) 2px,
+        transparent 3px,
+
+    );
+    grid-template-rows: 30% 40% 30%;
+    grid-template-columns: auto 45vmin auto;
+    grid-template-areas: 
+    ". . ."
+    '. container .'
+    '. . .';
+}
+
+#login_container {
+    transition: 1s all ease;
+    position: relative;
+    top: -400%;
+    display: flex;
+    background-color: whitesmoke;
+    gap: 2vmin;
+    justify-content: center;
+    flex-flow: column;
+    padding: 4vmin;
+    font-family: variables.$titleFont;
+    grid-area: container;
+    border: 0.4vmin solid black;
+    border-bottom-width: 1vmin;
+    border-right-width: 0.8vmin;
+    color: variables.$textColor;
+    white-space: 0;
+}
+
+#login_inputsContainer {
+    display: flex;
+    gap: 0.5vmin;
+    flex-flow: column;
+}
+
+.login_active {
+    transition: 1s all ease;
+    top: 0%  !important;
+}
+
+.login_rememberPassword{
+    cursor: pointer;
+    text-align: left;
+    text-decoration: underline;
+    font-size: 1.4vmin;
+    font-family: variables.$titleFont;
+    font-weight: variables.$titleWeight;
+    margin-bottom: 0;
+}
+
+.container_input{
+    transition: 0.1s all linear;
+    border: 0.4vmin solid black ;
+    border-bottom-width: 0.7vmin;
+    font-family: variables.$othersFont;
+    border-right-width: 0.6vmin;
+    width: 100%;
+    font-size: 2vmin;
+}
+
+.container_input:focus {
+    transition: 0.1s all linear;
+    border-bottom-width: 0.9vmin;
+    border-right-width: 0.8vmin;
+}
+
+.container_input:hover {
+    
+    transition: 0.1s all linear;
+    border-bottom-width: 0.9vmin;
+    border-right-width: 0.8vmin;
+}
+
+.main_container_warning{
+    transition: 1s all ease;
+    position: absolute;
+    top: -100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background-color: whitesmoke;
+    gap: 2vmin;
+    justify-content: center;
+    flex-flow: column;
+    padding: 4vmin;
+    font-family: variables.$titleFont;
+    grid-area: container;
+    border: 0.4vmin solid black;
+    border-bottom-width: 1vmin;
+    border-right-width: 0.8vmin;
+    color: variables.$textColor;
+    white-space: 0;
+}
+
+.warning_active{
+    transition: 0.5s all ease;
+    top: 10%;
+}
