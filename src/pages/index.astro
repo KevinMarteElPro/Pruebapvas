@@ -1,64 +1,68 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/LayoutPage.astro';
 import Card from '../components/Card.astro';
 import '../../public/styles/main.scss'
-
 ---
 
-<Layout title="Login">
-	<main id="login_page">
-
-		<div class="main_container_warning" id="warning">
-			<h1 class="container_title">¡Uno de los datos ingresados es incorrecto!</h1>
-		</div>
-
-		<div id="login_container" class="container">
-			<h1 class="container_title_center">LOGIN</h1>
-			<div id="login_inputsContainer">
-				<h3 class="container_subtitle_mini">NOMBRE</h3>
-				<input type="text" id="username" class="container_input">
-				<h3 class="container_subtitle_mini">CONTRASEÑA</h3>
-				<input type="text" id="password" class="container_input">
-			</div>
-
-			<button class="container_button" id="login_button">INICIAR SESION</button>
+<Layout title="Index">
+	<main id="MainPage">
+		<section id="FirstSection">
 			<div>
-				<a class="login_rememberPassword" href="">Recuperar contraseña</a>
+				<h2 class="container_title">Quien soy</h2>
+				<p class="container_paragraph">Soy Kevin Marte, soy un programador con conocimientos de desarrollo de bots de Discord con alrededor de un año de experiencia como freelancer.</p>
 			</div>
-			<a class="login_rememberPassword" href="">Registrarse</a>
-		</div>
+			<div>
+				<h2 class="container_title">Soy</h2>
+				<p class="container_paragraph">Soy Kevin Marte, soy un programador con conocimientos de desarrollo de bots de Discord con alrededor de un año de experiencia como freelancer.</p>
+			</div>
+		</section>
+
+		<section id="Trabajos">
+			<div>
+				<video src="/src/proof.mp4" muted autoplay controls></video>
+			</div>
+			<div>
+				<h2 class="container_title">Master Resell - Bot</h2>
+				<p class="container_paragraph">
+					Un bot cuyo objetivo es buscar informacion de productos en tiendas online y mandar dicha informacion a ciertas areas que el cliente desee.
+				</p>
+			</div>
+		</section>
+
+		<section>
+			<div>
+				<h2 class="container_title">Excel prices bot</h2>
+				<p class="container_paragraph">
+					Es un bot que busca informacion del precio comun de los celulares Iphone en reventa para luego sacar un promedio y ponerlo en una tabla de excel.	
+				</p>
+			</div>
+			<div>
+				<video src="/src/ExcelPrices.mp4" autoplay muted controls></video>
+			</div>
+		</section>
+
+		<section>
+			<div>
+				<video src="/src/trabajo.mp4" autoplay muted controls></video>
+			</div>
+			<div>
+				<h2 class="container_title">Generador de documentos</h2>
+				<p class="container_paragraph">
+					Un sistema para un sitio web que toma archivos PDF para luego aplicarles cierta plantilla de documentos mexicanos, con mas de 10 a elegir.
+				</p>
+			</div>
+		</section>
 	</main>
 </Layout>
 
 <script>
+	const DownloadContainer: HTMLDivElement = document.getElementById('download_container') as HTMLDivElement
 
-
-	const LoginContainer: HTMLDivElement = document.getElementById('login_container') as HTMLDivElement
-	const LoginButton: HTMLButtonElement = document.getElementById('login_button') as HTMLButtonElement
-	const UsernameInput: HTMLInputElement = document.getElementById('username') as HTMLInputElement
-	const PasswordInput: HTMLInputElement = document.getElementById('password') as HTMLInputElement
-
-	const Warning: HTMLDivElement = document.getElementById('warning') as HTMLDivElement
 
 	window.addEventListener('DOMContentLoaded', () => {
-		LoginContainer.classList.add('login_active')
+		DownloadContainer.classList.add('download_active')
 	})
 
-	function showWarning () {
-		Warning.classList.add('warning_active')
-
-		setTimeout(() => {
-			Warning.classList.remove('warning_active')
-		}, 3000);
-	}
-	LoginButton.addEventListener('click', () => {
-		if (UsernameInput.value != 'kevin') return showWarning();
-		if (PasswordInput.value != '123') return showWarning();
-
-		location.href = '/download'
-	})
-
-
-	
-	
 </script>
+
+

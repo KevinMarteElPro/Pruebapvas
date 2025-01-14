@@ -19,9 +19,24 @@ import { ViewTransitions } from 'astro:transitions';
 		<ViewTransitions />
 	</head>
 	<body>
+		<header class="Header">
+			<div>
+				<h2>Kevin's Portfolio</h2>
+			</div>
+
+			<div>
+				<a class="container_button" href="#Trabajos">Trabajos</a>
+				<a class="container_button" href="/Login">Login</a>
+			</div>
+		</header>
 
 		<slot />
 
+		<footer class="Footer">
+			<div>
+				<h2>Todos los derechos reservados</h2>
+			</div>
+		</footer>
 	</body>
 </html>
 <style is:global>

@@ -35,6 +35,7 @@
     border-bottom-width: 1vmin;
     border-right-width: 0.8vmin;
     color: variables.$textColor;
+    font-size: 5vmin !important;
     white-space: 0;
 }
 
@@ -53,7 +54,7 @@
     cursor: pointer;
     text-align: left;
     text-decoration: underline;
-    font-size: 1.4vmin;
+    font-size: 3.3vmin;
     font-family: variables.$titleFont;
     font-weight: variables.$titleWeight;
     margin-bottom: 0;
